@@ -11,12 +11,12 @@ pipeline {
         }
         stage('build') {
             steps {
-                dockerbuild("springboot-application")
+                dockerbuild("springboot-application","latest")
             }
         }
         stage('Push Image') {
             steps {
-                dockerpush("dockerHubCreds","notes-app","latest")
+                dockerpush("dockerHubCreds","springboot-application","latest")
             }
         }
         stage('Deploy'){
