@@ -1,4 +1,4 @@
-@Library("shared")_
+@Library('shared')_
 
 pipeline {
     agent {label 'dev-server-agent'}
@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout code') {
             steps {
-                clone('main', 'https://github.com/PakeezaPakeeza/java_springboot_app_CICD.git')
+                clone("https://github.com/LondheShubham153/django-notes-app.git","main")
             }
         }
         stage('build') {
