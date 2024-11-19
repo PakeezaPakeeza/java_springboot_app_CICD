@@ -1,4 +1,4 @@
-@Library("shared-library@DevOps") _
+@Library("shared")_
 
 pipeline {
     agent {label 'dev-server-agent'}
