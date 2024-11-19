@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout code') {
             steps {
-                clone("https://github.com/LondheShubham153/django-notes-app.git","main")
+                clone("https://github.com/PakeezaPakeeza/java_springboot_app_CICD.git","main")
             }
         }
         stage('build') {
