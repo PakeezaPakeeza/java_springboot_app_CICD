@@ -11,12 +11,12 @@ pipeline{
         }
         stage("Code Build"){
             steps{
-            dockerbuild("javaSpringBoot-bankApp","latest")
+            dockerbuild("javaspringboot-bankapp","latest")
             }
         }
         stage("Push to DockerHub"){
             steps{
-                dockerpush("dockerHubCreds","javaSpringBoot-bankApp","latest")
+                dockerpush("dockerHubCreds","javaspringboot-bankapp","latest")
             }
         }
         stage("Deploy"){
