@@ -1,7 +1,9 @@
 @Library('Shared')_
 pipeline{
     agent { label 'dev-worker-node'}
-    
+    environment {
+        COMPOSE_PROJECT_NAME = "bankapp_${env.BRANCH_NAME ?: 'main'}_${BUILD_NUMBER}" // Unique project name
+    }
     stages{
         stage("Code clone"){
             steps{
