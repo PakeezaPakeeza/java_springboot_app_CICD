@@ -18,7 +18,7 @@ services:
       start_period: 30s
 
   mainapp:
-    image: pakeeza/notes-app
+    image: pakeeza/javaSpringBoot-bankApp
     container_name: Bankapp
     environment:
       - SPRING_DATASOURCE_USERNAME=root
