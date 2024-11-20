@@ -11,12 +11,12 @@ pipeline{
         }
         stage("Code Build"){
             steps{
-            dockerbuild("notes-app","latest")
+            dockerbuild("javaSpringBoot-bankApp","latest")
             }
         }
         stage("Push to DockerHub"){
             steps{
-                dockerpush("dockerHubCreds","notes-app","latest")
+                dockerpush("dockerHubCreds","javaSpringBoot-bankApp","latest")
             }
         }
         stage("Deploy"){
