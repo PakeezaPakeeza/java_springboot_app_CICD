@@ -2,7 +2,7 @@ version: "3.8"
 services:
   mysql:
     image: mysql:latest
-    container_name:  "${COMPOSE_PROJECT_NAME}_mysql"
+    container_name: "main_mysql"
     environment:
       - MYSQL_ROOT_PASSWORD=Test@123
       - MYSQL_DATABASE=BankDB
