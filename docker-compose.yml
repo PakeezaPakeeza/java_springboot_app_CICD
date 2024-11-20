@@ -30,7 +30,7 @@ services:
       mysql:
         condition: service_healthy
     networks:
-      - bankapp
+      - main-bankapp
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8080/actuator/health || exit 1"]
