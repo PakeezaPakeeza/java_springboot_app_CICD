@@ -2,7 +2,7 @@ version: "3.8"
 services:
   mysql:
     image: mysql:latest
-    container_name: "main_mysql"
+    container_name: "dev_mysql"
     environment:
       - MYSQL_ROOT_PASSWORD=Test@123
       - MYSQL_DATABASE=BankDB
@@ -21,7 +21,7 @@ services:
 
   mainapp:
     image: pakeeza/javaspringboot-bankapp
-    container_name: "${COMPOSE_PROJECT_NAME}_app"
+    container_name: "dev_bankapp"
     environment:
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/BankDB?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
@@ -42,7 +42,7 @@ services:
       start_period: 30s
 
 networks:
-  main-bankapp:
+  dev-bankapp:
 
 volumes:
-    main-bankapp-volume:
+    dev-bankapp-volume:
